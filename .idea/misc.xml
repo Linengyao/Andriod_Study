@@ -4,9 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/SmartWatchProject/Android_Study/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1015" />
-        <entry key="..\:/SmartWatchProject/Android_Study/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/SmartWatchProject/Android_Study/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/SmartWatchProject/Android_Study/app/src/main/res/layout/activity_shared_preferences.xml" value="0.1" />
         <entry key="..\:/SmartWatchProject/Android_Study/app/src/main/res/layout/msg_left_item_layout.xml" value="0.1" />
         <entry key="..\:/SmartWatchProject/Android_Study/app/src/main/res/layout/msg_right_item_layout2.xml" value="0.1" />
+        <entry key="..\:/SmartWatchProject/Android_Study/app/src/main/res/layout/testlayout.xml" value="0.33" />
+        <entry key="..\:/SmartWatchProject/Android_Study/uidesign/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/SmartWatchProject/Android_Study/uidesign/src/main/res/layout/activity_main2.xml" value="0.33" />
+        <entry key="..\:/SmartWatchProject/Android_Study/uidesign/src/main/res/layout/cartoonlayout.xml" value="0.1" />
+        <entry key="..\:/SmartWatchProject/Android_Study/uidesign/src/main/res/layout/cartoonlayout2.xml" value="0.33" />
+        <entry key="..\:/SmartWatchProject/Android_Study/uidesign/src/main/res/layout/motionlayout.xml" value="0.33" />
+        <entry key="..\:/SmartWatchProject/Android_Study/uidesign/src/main/res/layout/testlayout.xml" value="0.33" />
       </map>
     </option>
   </component>
@@ -15,5 +23,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.33" />
+      </ProjectState>
+    </option>
   </component>
 </project>

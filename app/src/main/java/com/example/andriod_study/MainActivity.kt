@@ -1,5 +1,7 @@
 package com.example.andriod_study
 
+import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -17,26 +19,35 @@ class MainActivity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        initMsg() //初始化消息
-        val layoutManager = LinearLayoutManager(this)
-        var recycler : RecyclerView = findViewById(R.id.recycler1)
-        recycler.layoutManager = layoutManager
-        adapter = MsgAdapter(msgList)
-        recycler.adapter = adapter
+        var sharedPreferencesBtn : Button = findViewById(R.id.SharedPreferencesBtn)
+        sharedPreferencesBtn.setOnClickListener{
 
-
-        var sendButton : Button = findViewById(R.id.sendButton)
-        var sendEditText: EditText = findViewById(R.id.sendEditText)
-        sendButton.setOnClickListener{
-            val content = sendEditText.text.toString()
-            content?.let() {
-                val msg = Msg(content, Msg.TYPE_SENT)
-                msgList.add(msg)
-                adapter?.notifyItemInserted(msgList.size - 1)
-                recycler.scrollToPosition(msgList.size - 1)
-                sendEditText.setText("")
-            }
+            var intent  = Intent(this,SharedPreferencesActivity::class.java)
+            startActivity(intent)
         }
+
+
+
+//        initMsg() //初始化消息
+//        val layoutManager = LinearLayoutManager(this)
+//        var recycler : RecyclerView = findViewById(R.id.recycler1)
+//        recycler.layoutManager = layoutManager
+//        adapter = MsgAdapter(msgList)
+//        recycler.adapter = adapter
+//
+//
+//        var sendButton : Button = findViewById(R.id.sendButton)
+//        var sendEditText: EditText = findViewById(R.id.sendEditText)
+//        sendButton.setOnClickListener{
+//            val content = sendEditText.text.toString()
+//            content?.let() {
+//                val msg = Msg(content, Msg.TYPE_SENT)
+//                msgList.add(msg)
+//                adapter?.notifyItemInserted(msgList.size - 1)
+//                recycler.scrollToPosition(msgList.size - 1)
+//                sendEditText.setText("")
+//            }
+//        }
 
     }
 
@@ -60,14 +71,14 @@ class MainActivity : AppCompatActivity()
 //        return super.onOptionsItemSelected(item)
 //    }
 
-    private val msgList = ArrayList<Msg>()
-    private  var adapter:MsgAdapter ?= null
-    private fun initMsg(){
-        val msg1 = Msg("Hello guy.", Msg.TYPE_RECV)
-        msgList.add(msg1)
-        val msg2 = Msg("Hello. Who is that?", Msg.TYPE_SENT)
-        msgList.add(msg2)
-        val msg3 = Msg("This is Tom. Nice talking to you. ", Msg.TYPE_RECV)
-        msgList.add(msg3)
-    }
+//    private val msgList = ArrayList<Msg>()
+//    private  var adapter:MsgAdapter ?= null
+//    private fun initMsg(){
+//        val msg1 = Msg("Hello guy.", Msg.TYPE_RECV)
+//        msgList.add(msg1)
+//        val msg2 = Msg("Hello. Who is that?", Msg.TYPE_SENT)
+//        msgList.add(msg2)
+//        val msg3 = Msg("This is Tom. Nice talking to you. ", Msg.TYPE_RECV)
+//        msgList.add(msg3)
+//    }
 }
